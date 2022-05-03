@@ -797,6 +797,10 @@ Blockly.Flyout.prototype.onMouseDown_ = function(e) {
  * @package
  */
 Blockly.Flyout.prototype.createBlock = function(originalBlock) {
+  console.log('##', JSON.stringify({
+    'id': originalBlock.id,
+    'time': Date.now()
+  }));
   var newBlock = null;
   Blockly.Events.disable();
   var variablesBeforeCreation = this.targetWorkspace_.getAllVariables();
